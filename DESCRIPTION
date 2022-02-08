@@ -1,0 +1,50 @@
+Package: saemix
+Title: Stochastic Approximation Expectation Maximization (SAEM) Algorithm
+Version: 3.0
+Authors@R: c(
+    person("Emmanuelle", "Comets", role = c("aut", "cre"),
+           email = "emmanuelle.comets@inserm.fr"),
+    person("Audrey", "Lavenu", role = "aut"),
+    person("Marc", "Lavielle", role = "aut"),
+    person("Belhal", "Karimi", role = "aut"),
+    person("Maud", "Delattre", role = "ctb"),
+    person("Marilou", "Chanel", role = "ctb"),
+    person("Johannes", "Ranke", role = "ctb",
+      comment = c(ORCID = "0000-0003-4371-6538")),
+    person("Sofia", "Kaisaridi", role = "ctb"),
+    person("Lucie", "Fayette", role = "ctb"))
+Description: The 'saemix' package implements the Stochastic Approximation EM algorithm for parameter estimation in (non)linear mixed effects models. The SAEM algorithm (i) computes the maximum likelihood estimator of the population parameters, without any approximation of the model (linearisation, quadrature approximation,...), using the Stochastic Approximation Expectation Maximization (SAEM) algorithm, (ii) provides standard errors for the maximum likelihood estimator (iii) estimates the conditional modes, the conditional means and the conditional standard deviations of the individual parameters, using the Hastings-Metropolis algorithm (see Comets et al. (2017) <doi:10.18637/jss.v080.i03>). Many applications of SAEM in agronomy, animal breeding and PKPD analysis have been published by members of the Monolix group. The full PDF documentation for the package including references about the algorithm and examples can be downloaded on the github of the IAME research institute for 'saemix': <https://github.com/iame-researchCenter/saemix/blob/7638e1b09ccb01cdff173068e01c266e906f76eb/docsaem.pdf>.
+License: GPL (>= 2)
+LazyLoad: yes
+LazyData: yes
+Imports: graphics, stats, methods, gridExtra, ggplot2, grid, rlang
+Suggests: testthat, MASS, survival
+Depends: npde (>= 3.2)
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.2
+NeedsCompilation: no
+Collate: 
+    'aaa_generics.R'
+    'SaemixData.R'
+    'SaemixModel.R'
+    'SaemixRes.R'
+    'SaemixObject.R'
+    'backward.R'
+    'compute_LL.R'
+    'forward.R'
+    'func_FIM.R'
+    'func_aux.R'
+    'func_compare.R'
+    'func_distcond.R'
+    'func_estimParam.R'
+    'func_npde.R'
+    'func_plots.R'
+    'func_simulations.R'
+    'func_stepwise.R'
+    'main.R'
+    'main_estep.R'
+    'main_initialiseMainAlgo.R'
+    'main_mstep.R'
+    'stepwise.R'
+    'zzz.R'
